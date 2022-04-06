@@ -1,0 +1,350 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4DD4744-5ED9-4CD2-B35A-7C99A742D899}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>SahovskaFederacija</RootNamespace>
+    <AssemblyName>SahovskaFederacija</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr3.Runtime.3.5.1\lib\net40-client\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="FluentNHibernate, Version=3.1.0.0, Culture=neutral, PublicKeyToken=8aa435e3cb308880, processorArchitecture=MSIL">
+      <HintPath>..\packages\FluentNHibernate.3.1.0\lib\net461\FluentNHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Iesi.Collections, Version=4.0.0.4000, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\Iesi.Collections.4.0.4\lib\net461\Iesi.Collections.dll</HintPath>
+    </Reference>
+    <Reference Include="NHibernate, Version=5.3.0.0, Culture=neutral, PublicKeyToken=aa95f207798dfdb4, processorArchitecture=MSIL">
+      <HintPath>..\packages\NHibernate.5.3.3\lib\net461\NHibernate.dll</HintPath>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.19.1, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>..\packages\Oracle.ManagedDataAccess.19.11.0\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Remotion.Linq.EagerFetching, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Remotion.Linq.EagerFetching.2.2.0\lib\net45\Remotion.Linq.EagerFetching.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DataLayer.cs" />
+    <Compile Include="DTOManager.cs" />
+    <Compile Include="DTOs.cs" />
+    <Compile Include="Entiteti\Organizator.cs" />
+    <Compile Include="Entiteti\Osoba.cs" />
+    <Compile Include="Entiteti\Partija.cs" />
+    <Compile Include="Entiteti\Potez.cs" />
+    <Compile Include="Entiteti\Sahista.cs" />
+    <Compile Include="Entiteti\SahistaKandidat.cs" />
+    <Compile Include="Entiteti\SahistaMajstor.cs" />
+    <Compile Include="Entiteti\SahistaObican.cs" />
+    <Compile Include="Entiteti\Sponzor.cs" />
+    <Compile Include="Entiteti\Sudija.cs" />
+    <Compile Include="Entiteti\Turnir.cs" />
+    <Compile Include="Entiteti\TurnirEgzibicioni.cs" />
+    <Compile Include="Entiteti\TurnirHumanitarniBP.cs" />
+    <Compile Include="Entiteti\TurnirHumanitarniN.cs" />
+    <Compile Include="Entiteti\TurnirPromotivniBP.cs" />
+    <Compile Include="Entiteti\TurnirPromotivniN.cs" />
+    <Compile Include="Entiteti\TurnirTakmicarskiBP.cs" />
+    <Compile Include="Entiteti\TurnirTakmicarskiN.cs" />
+    <Compile Include="Forme\DodajOrganizatoraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajOrganizatoraForma.Designer.cs">
+      <DependentUpon>DodajOrganizatoraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajOrganizatoraTurniraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajOrganizatoraTurniraForma.Designer.cs">
+      <DependentUpon>DodajOrganizatoraTurniraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajPartijuTurnira.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajPartijuTurnira.Designer.cs">
+      <DependentUpon>DodajPartijuTurnira.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajPotezForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajPotezForma.Designer.cs">
+      <DependentUpon>DodajPotezForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajSahistuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajSahistuForma.Designer.cs">
+      <DependentUpon>DodajSahistuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajSponzoraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajSponzoraForma.Designer.cs">
+      <DependentUpon>DodajSponzoraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\DodajTurnirForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\DodajTurnirForma.Designer.cs">
+      <DependentUpon>DodajTurnirForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniOrganizatoraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniOrganizatoraForma.Designer.cs">
+      <DependentUpon>IzmeniOrganizatoraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniPartijeTurniraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniPartijeTurniraForma.Designer.cs">
+      <DependentUpon>IzmeniPartijeTurniraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniPotezForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniPotezForma.Designer.cs">
+      <DependentUpon>IzmeniPotezForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniSahistuForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniSahistuForma.Designer.cs">
+      <DependentUpon>IzmeniSahistuForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniSponzoraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniSponzoraForma.Designer.cs">
+      <DependentUpon>IzmeniSponzoraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\IzmeniTurnirForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\IzmeniTurnirForma.Designer.cs">
+      <DependentUpon>IzmeniTurnirForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrganizatoriForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrganizatoriForma.Designer.cs">
+      <DependentUpon>OrganizatoriForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\OrganizatoriTurniraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\OrganizatoriTurniraForma.Designer.cs">
+      <DependentUpon>OrganizatoriTurniraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PartijeTurniraForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PartijeTurniraForma.Designer.cs">
+      <DependentUpon>PartijeTurniraForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\PoteziPartijeForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\PoteziPartijeForma.Designer.cs">
+      <DependentUpon>PoteziPartijeForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SahistiForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SahistiForma.Designer.cs">
+      <DependentUpon>SahistiForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\SponzoriForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\SponzoriForma.Designer.cs">
+      <DependentUpon>SponzoriForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forme\TurniriForma.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forme\TurniriForma.Designer.cs">
+      <DependentUpon>TurniriForma.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Mapiranja\OrganizatorMap.cs" />
+    <Compile Include="Mapiranja\PartijaMap.cs" />
+    <Compile Include="Mapiranja\PotezMap.cs" />
+    <Compile Include="Mapiranja\SahistaMap.cs" />
+    <Compile Include="Mapiranja\SponzorMap.cs" />
+    <Compile Include="Mapiranja\SudijaMap.cs" />
+    <Compile Include="Mapiranja\TurnirMap.cs" />
+    <Compile Include="Pocetna.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pocetna.Designer.cs">
+      <DependentUpon>Pocetna.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forme\DodajOrganizatoraForma.resx">
+      <DependentUpon>DodajOrganizatoraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajOrganizatoraTurniraForma.resx">
+      <DependentUpon>DodajOrganizatoraTurniraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajPartijuTurnira.resx">
+      <DependentUpon>DodajPartijuTurnira.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajPotezForma.resx">
+      <DependentUpon>DodajPotezForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajSahistuForma.resx">
+      <DependentUpon>DodajSahistuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajSponzoraForma.resx">
+      <DependentUpon>DodajSponzoraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\DodajTurnirForma.resx">
+      <DependentUpon>DodajTurnirForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniOrganizatoraForma.resx">
+      <DependentUpon>IzmeniOrganizatoraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniPartijeTurniraForma.resx">
+      <DependentUpon>IzmeniPartijeTurniraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniPotezForma.resx">
+      <DependentUpon>IzmeniPotezForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniSahistuForma.resx">
+      <DependentUpon>IzmeniSahistuForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniSponzoraForma.resx">
+      <DependentUpon>IzmeniSponzoraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\IzmeniTurnirForma.resx">
+      <DependentUpon>IzmeniTurnirForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrganizatoriForma.resx">
+      <DependentUpon>OrganizatoriForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\OrganizatoriTurniraForma.resx">
+      <DependentUpon>OrganizatoriTurniraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PartijeTurniraForma.resx">
+      <DependentUpon>PartijeTurniraForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\PoteziPartijeForma.resx">
+      <DependentUpon>PoteziPartijeForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SahistiForma.resx">
+      <DependentUpon>SahistiForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\SponzoriForma.resx">
+      <DependentUpon>SponzoriForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forme\TurniriForma.resx">
+      <DependentUpon>TurniriForma.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Pocetna.resx">
+      <DependentUpon>Pocetna.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

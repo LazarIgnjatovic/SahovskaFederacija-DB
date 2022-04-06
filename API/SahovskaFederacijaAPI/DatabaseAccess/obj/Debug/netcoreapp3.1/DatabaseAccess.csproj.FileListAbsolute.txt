@@ -1,0 +1,9 @@
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\bin\Debug\netcoreapp3.1\DatabaseAccess.deps.json
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\bin\Debug\netcoreapp3.1\DatabaseAccess.dll
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\bin\Debug\netcoreapp3.1\DatabaseAccess.pdb
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.csprojAssemblyReference.cache
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.AssemblyInfoInputs.cache
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.AssemblyInfo.cs
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.csproj.CoreCompileInputs.cache
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.dll
+C:\Users\PC\Documents\Faks\sahovskafederacija\API\SahovskaFederacijaAPI\DatabaseAccess\obj\Debug\netcoreapp3.1\DatabaseAccess.pdb
